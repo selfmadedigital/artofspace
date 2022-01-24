@@ -1,0 +1,217 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600&display=swap");
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: "Barlow", sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+a, a:visited, a:focus, a:active {
+  color: #A1A1A1;
+}
+a:hover {
+  color: #000;
+}
+
+#logo {
+  width: 20vw;
+  height: 20vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+#logo .logo-text h1, #logo .logo-text h2 {
+  text-align: justify;
+  font-size: 3vw;
+}
+#logo .logo-text h2 {
+  font-size: 1.5vw;
+}
+#logo .logo-text img {
+  margin-top: 1.2vw;
+}
+#logo .logo-line {
+  width: 100%;
+  height: 0.6vw;
+  background-color: #000;
+  margin-top: 1.2vw;
+  color: #fff;
+  display: flex;
+  align-items: flex-end;
+  font-size: 1.2vw;
+  line-height: 1.1vw;
+  padding: 0 0 0 1vw;
+  font-weight: 500;
+  justify-content: space-between;
+  position: relative;
+}
+#logo .logo-line a {
+  color: #fff;
+  font-weight: 500;
+  opacity: 0;
+}
+#logo .logo-line a:hover {
+  color: #808080;
+}
+#logo .logo-line:first-child {
+  margin-top: 0;
+}
+#logo .logo-line.even span {
+  color: #808080;
+  background-color: #fff;
+  padding: 1vw 1vw 0 1vw;
+  margin: 0 -2px;
+  opacity: 0;
+}
+#logo .logo-line.even span a {
+  color: #808080;
+}
+#logo .logo-line.even span a:hover {
+  color: #000;
+}
+#logo .logo-line.even.left-align {
+  padding: 0 1vw 0 0;
+}
+#logo.list-categories .logo-line.even {
+  height: 1.8vw;
+}
+#logo.list-categories .logo-line.odd {
+  margin-top: 0;
+  width: 60vw;
+}
+#logo.list-categories .logo-line.odd.left-align {
+  left: -40vw;
+}
+
+.navbar {
+  box-shadow: none;
+  opacity: 0;
+  height: 10vh;
+}
+.navbar img {
+  height: 15px;
+}
+.navbar.navbar-expand-lg .navbar-nav .nav-link {
+  padding: 0.5rem 2rem 0.5rem 0;
+  font-weight: 500;
+}
+.navbar.navbar-expand-lg #menu-btn {
+  background: none;
+  border: 0;
+}
+
+.owl-carousel {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.owl-carousel .owl-stage {
+  padding: 0 !important;
+}
+.owl-carousel .owl-nav {
+  position: absolute;
+  top: 20%;
+  left: 0;
+  width: 100%;
+  font-size: 5rem;
+}
+.owl-carousel .owl-nav button.owl-prev {
+  margin-left: 1rem;
+}
+.owl-carousel .owl-nav button.owl-next {
+  margin-right: 1rem;
+  float: right;
+}
+
+.card {
+  box-shadow: none;
+}
+.card .card-body {
+  padding: 1rem;
+}
+.card .card-body .card-text, .card .card-body .card-title {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #747373;
+  line-height: 1.5rem;
+  text-transform: uppercase;
+  margin: 0;
+}
+.card .card-img-top {
+  border: 2px solid #000;
+  border-left: 0;
+  border-right: 0;
+  height: 40vh;
+  padding: 0 1rem;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+.project-detail .container-fluid {
+  padding: 5vh 5vw;
+  height: 100%;
+  overflow: scroll;
+}
+.project-detail .container-fluid .row.row-details {
+  height: min-content;
+  align-items: flex-end;
+}
+.project-detail .container-fluid .row.row-main {
+  max-height: -webkit-fill-available;
+  overflow: hidden;
+  height: -webkit-fill-available;
+}
+.project-detail h1 {
+  width: 100%;
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+.project-detail h2 {
+  width: 100%;
+  height: 100%;
+  text-transform: uppercase;
+  font-weight: bolder;
+  text-align: right;
+}
+.project-detail p {
+  text-align: justify;
+}
+.project-detail img {
+  object-fit: cover;
+  max-height: 30em;
+  width: 100%;
+}
+
+.full-screen-scroller .fss-mainview {
+  height: 90vh !important;
+}
+.full-screen-scroller .fss-subview .fss-dotted-scrollspy {
+  width: 100%;
+  left: 0;
+  top: 50%;
+  right: auto;
+  transform: none;
+  justify-content: space-between;
+  padding: 0 1rem;
+}
+.full-screen-scroller .fss-subview .fss-dotted-scrollspy .fss-nav-item {
+  display: none;
+}
+.full-screen-scroller .fss-subview .fss-dotted-scrollspy .fss-nav-btn {
+  color: #666;
+  font-size: 2.5rem;
+}
+.full-screen-scroller .fss-subview .fss-dotted-scrollspy .fss-nav-btn.fss-subview-up {
+  position: fixed;
+  left: 0;
+  top: 1rem;
+  width: 100%;
+  opacity: 0;
+}
+
+/*# sourceMappingURL=style.css.map */

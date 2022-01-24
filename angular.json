@@ -5,7 +5,7 @@
   "projects": {
     "fullpage": {
       "root": "",
-      "sourceRoot": "demo",
+      "sourceRoot": "app",
       "projectType": "application",
       "prefix": "app",
       "schematics": {
@@ -36,17 +36,19 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/demo",
-            "index": "demo/index.html",
-            "main": "demo/main.ts",
-            "polyfills": "demo/polyfills.ts",
-            "tsConfig": "demo/tsconfig.app.json",
+            "outputPath": "dist/app",
+            "index": "app/index.html",
+            "main": "app/main.ts",
+            "polyfills": "app/polyfills.ts",
+            "tsConfig": "app/tsconfig.app.json",
             "assets": [
-              "demo/favicon.ico",
-              "demo/assets"
+              "app/favicon.ico",
+              "app/assets"
             ],
             "styles": [
-              "demo/styles.scss"
+              "node_modules/ngx-owl-carousel-o/lib/styles/prebuilt-themes/owl.carousel.min.css",
+              "node_modules/ngx-owl-carousel-o/lib/styles/prebuilt-themes/owl.theme.default.min.css",
+              "app/styles.scss"
             ],
             "scripts": [
               "node_modules/fullpage.js/vendors/scrolloverflow.min.js"
@@ -56,8 +58,8 @@
             "production": {
               "fileReplacements": [
                 {
-                  "replace": "demo/environments/environment.ts",
-                  "with": "demo/environments/environment.prod.ts"
+                  "replace": "app/environments/environment.ts",
+                  "with": "app/environments/environment.prod.ts"
                 }
               ],
               "optimization": true,
@@ -92,17 +94,17 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "demo/test.ts",
-            "polyfills": "demo/polyfills.ts",
-            "tsConfig": "demo/tsconfig.spec.json",
-            "karmaConfig": "demo/karma.conf.js",
+            "main": "app/test.ts",
+            "polyfills": "app/polyfills.ts",
+            "tsConfig": "app/tsconfig.spec.json",
+            "karmaConfig": "app/karma.conf.js",
             "styles": [
-              "demo/styles.scss"
+              "app/styles.scss"
             ],
             "scripts": [],
             "assets": [
-              "demo/favicon.ico",
-              "demo/assets"
+              "app/favicon.ico",
+              "app/assets"
             ]
           }
         },
@@ -110,8 +112,8 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "demo/tsconfig.app.json",
-              "demo/tsconfig.spec.json"
+              "app/tsconfig.app.json",
+              "app/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"
