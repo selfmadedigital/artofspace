@@ -74,7 +74,7 @@ a:hover {
 #logo .logo-line.even span a:hover {
   color: #000;
 }
-#logo .logo-line.even.left-align {
+#logo .logo-line.even.left-align, #logo .logo-line.logo-line.even:nth-child(even) {
   padding: 0 1vw 0 0;
 }
 #logo.list-categories .logo-line.even {
@@ -84,7 +84,7 @@ a:hover {
   margin-top: 0;
   width: 60vw;
 }
-#logo.list-categories .logo-line.odd.left-align {
+#logo.list-categories .logo-line.odd.left-align, #logo.list-categories .logo-line.odd:nth-child(odd) {
   left: -40vw;
 }
 

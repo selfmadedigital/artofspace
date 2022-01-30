@@ -3,3 +3,5 @@
  */
 export * from './public_api';
 export { AnchorLinkDirective as ɵb, FullpageDirective as ɵa } from './lib/fullpage.directive';
+
+//# sourceMappingURL=fullpage-angular-fullpage.d.ts.map

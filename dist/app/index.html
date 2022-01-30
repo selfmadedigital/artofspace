@@ -1,0 +1,283 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Artofspace.eu</title>
+  <base href="/">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/app/assets/icon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/app/assets/icon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/app/assets/icon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/app/assets/icon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/app/assets/icon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/app/assets/icon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/app/assets/icon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/app/assets/icon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/app/assets/icon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/app/assets/icon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/app/assets/icon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/app/assets/icon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/app/assets/icon/favicon-16x16.png">
+  <link rel="manifest" href="/app/assets/icon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/icon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+  <link rel="stylesheet" href="/app/assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/app/assets/css/mdb.min.css">
+  <link href="/app/assets/css/fsscroller.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/app/assets/css/owl.carousel.min.css">
+
+  <link rel="stylesheet" href="/app/assets/css/style.css">
+<link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="styles.css"></noscript></head>
+
+<body>
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+       <div class="collapse navbar-collapse d-flex justify-content-end" id="navigation">
+        <ul id="navigation-nav" class="navbar-nav ms-auto" data-mdb-toggle="animation" data-mdb-animation-start="onClick" data-mdb-animation-show-on-load="false" data-mdb-animation="slide-in-left">
+         <li class="nav-item">
+          <a class="nav-link fss-nav-item" href="#menu">PROJEKTY</a>
+         </li>
+         <li class="nav-item">
+          <a class="nav-link fss-nav-item" href="#">ATELIÉR</a>
+         </li>
+        </ul>
+        
+        <button data-mdb-toggle="animation" data-mdb-animation-target="#navigation-nav" id="menu-btn">
+         <img src="/app/assets/img/svg/menu-icon.svg" alt="">
+       </button>
+       </div>
+    </div>
+   </nav>
+  
+  
+   <app-root></app-root>
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/app/assets/js/jquery.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="/app/assets/js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="/app/assets/js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="/app/assets/js/mdb.min.js"></script>
+  <script type="text/javascript" src="/app/assets/js/mdbFsscroller.min.js"></script>
+  <script type="text/javascript" src="/app/assets/js/jquery.fittext.js"></script>
+  <script type="text/javascript" src="/app/assets/js/jquery.textfill.min.js"></script>
+  <script src="/app/assets/js/owl.carousel.min.js"></script>
+  <script src="https://huynhhuynh.github.io/owlcarousel2-filter/dist/owlcarousel2-filter.min.js"></script>
+
+
+  <!-- Your custom scripts (optional) -->
+  <script type="text/javascript">
+    var fssHeight = $('body').height() * 0.9;
+    $(window).on("resize", function () {
+      fssHeight = $('body').height() * 0.9;
+    });
+    $(document).ready(function () {
+
+      $(".full-screen-scroller").fullScreenScroller({
+        fitToView: 1,
+        useScrollbar: 1,
+        viewsHeight: [fssHeight, fssHeight, fssHeight]
+      });
+
+
+
+      var carousel = $(".owl-carousel").owlCarousel({
+        loop: true,
+        responsiveClass: true,
+        stagePadding: 50,
+        nav: true,
+        loop: true,
+        responsive: {
+          0: {
+            items: 1
+          },
+          600: {
+            items: 3
+          }
+        }
+      });
+
+      $(".owl-carousel .owl-nav").removeClass('disabled');
+
+
+      // $('.project-detail h1').fitText(0.4);
+      // $('.project-detail h2').fitText();
+
+
+      $('button.fss-subview-up').on('click', function () {
+        window.location = '#menu';
+      });
+
+
+
+
+      $('#logo').on('click', function () {
+        if (!$(this).hasClass('show-menu')) {
+          $('.logo-line.even').animate({
+            'height': '1.8vw'
+          }, { duration: 400, queue: false });
+
+          $('.logo-line.odd.left-align').animate({
+            'left': '-40vw'
+          }, { duration: 400, queue: false });
+
+          $('.logo-line.odd').animate({
+            'margin-top': '0',
+            'width': '60vw',
+          }, { duration: 400, queue: false });
+
+          $('.logo-line a').animate({
+            'opacity': '1'
+          }, 800);
+
+          $('.logo-line span').animate({
+            'opacity': '1'
+          }, 800);
+
+          $(this).addClass('show-menu');
+        }
+      });
+
+
+
+      $('#logo a').on('click', function (event) {
+        event.preventDefault();
+
+        if ($('#logo').hasClass('show-menu')) {
+          var hash = $(this).prop("hash");
+          var category = hash.substring((hash.indexOf('-') + 1), hash.length);
+
+          carousel.owlcarousel2_filter('.' + category);
+          $('.owl-carousel .owl-item').filter('.active').first().click();
+          window.location = '#projekty';
+
+
+
+
+          $('nav.navbar').animate({
+            'opacity': '1'
+          }, 1000);
+        }
+      });
+
+
+
+
+
+
+
+
+    });
+
+    //          $('body').on('scroll touchmove mousewheel', function(e){
+    //   e.preventDefault();
+    //   e.stopPropagation();
+    //   return false;
+    // });
+
+    function slugify(str) {
+      str = str.replace(/^\s+|\s+$/g, ''); // trim
+      str = str.toLowerCase();
+
+      // remove accents, swap ñ for n, etc
+      var from = "ÁÄÂÀÃÅČÇĆĎÉĚËÈÊẼĔȆĞÍÌÎÏİŇÑÓÖÒÔÕØŘŔŠŞŤÚŮÜÙÛÝŸŽáäâàãåčçćďéěëèêẽĕȇğíìîïıňñóöòôõøðřŕšşťúůüùûýÿžþÞĐđßÆa·/_,:;";
+      var to = "AAAAAACCCDEEEEEEEEGIIIIINNOOOOOORRSSTUUUUUYYZaaaaaacccdeeeeeeeegiiiiinnooooooorrsstuuuuuyyzbBDdBAa------";
+      for (var i = 0, l = from.length; i < l; i++) {
+        str = str.replace(new RegExp(from.charAt(i), 'g'), to.charAt(i));
+      }
+
+      str = str.replace(/[^a-z0-9 -]/g, '') // remove invalid chars
+        .replace(/\s+/g, '-') // collapse whitespace and replace by -
+        .replace(/-+/g, '-'); // collapse dashes
+
+      return str;
+    };
+
+    function loadProject(project) {
+      $.ajax({
+        type: "GET",
+        url: "./detail.php?project=" + project,
+        data: {},
+        contentType: "application/json; charset=utf-8",
+        dataType: "json",
+        cache: false,
+        success: function (response) {
+          var trHTML = '';
+          var cmsUri = 'https://cms.artofspace.eu';
+          var slug = slugify(response.Nazov);
+
+          $('#detail-content-subview').attr('fss-anchor', 'detail-' + slug);
+
+          $('#detail-content-subview').attr('class', 'fss-subview-item project-detail fss-active');
+          if (response.Situacia != null) {
+            $('#situation-name span').text(response.Situacia.Nazov);
+            $('#situation-category').text(response.Situacia.Typ);
+            $('#situation-content').html(response.Situacia.Text);
+            $('#situation-img').html('<img src="' + cmsUri + response.Situacia.Obrazok.url + '" alt="' + response.Situacia.Nazov + '" />');
+
+            if (response.Situacia.Miesto != null) {
+              $('#situation-details').append('<li>Miesto : ' + response.Situacia.Miesto + '</li>');
+            }
+
+            if (response.Situacia.Autor != null) {
+              $('#situation-details').append('<li>Autor : ' + response.Situacia.Autor + '</li>');
+            }
+
+            if (response.Situacia.Spolupraca != null) {
+              $('#situation-details').append('<li>Spolupráca : ' + response.Situacia.Spolupraca + '</li>');
+            }
+
+            if (response.Situacia.Info != null) {
+              $('#situation-details').append('<li>' + response.Situacia.Info + '</li>');
+            }
+          }
+
+          $(response.Foto).each(function () {
+            $('#detail-content').append('<div fss-anchor="detail-gallery-' + this.id + '" class="fss-subview-item project-detail detail-gallery-' + this.id + '"><div class="container-fluid"><div class="row"><div class="col-md-12"><img src="' + cmsUri + this.url + '" alt="' + response.Nazov + '" /></div></div></div></div>');
+          })
+          $('#situation-name').height($('#situation-name').width() / 3);
+
+          $('#situation-name').textfill({
+            'widthOnly': true,
+            'allowOverflow': true,
+            'debug': true,
+            'maxFontPixels': 0,
+            'changeLineHeight': true
+          });
+
+          $('.fss-subview-up').animate({
+            'opacity': '1'
+          }, 800);
+
+
+          $('.full-screen-scroller').animate({ scrollTop: fssHeight * 2 }, 2000);
+          window.location = '#detail-' + slug;
+        },
+        error: function (e) {
+          console.log(response);
+        }
+      });
+    }
+
+    $('button.fss-subview-right').on('click', function (event) {
+      event.preventDefault();
+      window.location = '#detail-gallery-8';
+    });
+
+
+
+
+
+
+  </script>
+<script src="runtime.js" type="module"></script><script src="polyfills.js" type="module"></script><script src="scripts.js" defer></script><script src="main.js" type="module"></script>
+
+</body></html>

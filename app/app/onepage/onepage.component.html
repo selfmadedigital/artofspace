@@ -1,0 +1,137 @@
+<!-- <div id="navigation">
+   <ul id="menu">
+      <li data-menuanchor="projects"><a href="#projects">PROJEKTY</a></li>
+      <li data-menuanchor="atelier"><a href="#atelier">ATELIÉR</a></li>  
+   </ul>
+   <img src="/assets/img/svg/menu-icon.svg" alt="" />
+</div> -->
+   <!-- <nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+     <div class="collapse navbar-collapse d-flex justify-content-end" id="navigation">
+        <ul class="navbar-nav ms-auto">
+           <li class="nav-item">
+              <a class="nav-link fss-nav-item" href="#projects">PROJEKTY
+              </a>
+           </li>
+           <li class="nav-item">
+              <a class="nav-link fss-nav-item" href="#">ATELIÉR</a>
+           </li>
+        </ul>
+        <img src="img/svg/menu-icon.svg" alt="" />
+     </div>
+     </div>
+</nav> -->
+
+<div fullpage id="fullpage" [options]="config" (ref)="getRef($event)" #fullpageRef>
+        <div class="section">
+            <div id="logo">
+               <ng-container *ngFor="let category of categories ; index as i">
+                     <div class="logo-line even" [ngClass]="{'left-align': (i%2==1)}">
+                        <a href="{{ category.attributes.Nazov | slugify }}">{{ category.attributes.Nazov }}</a>
+                        <span>
+                           <a href="{{ category.attributes.Nazov | slugify}}">{{ category.attributes.localizations.data[0].attributes.Nazov }}</a>
+                        </span>
+                     </div>
+                     <div class="logo-line odd"></div>
+                  </ng-container>
+                  
+
+              <!-- <div class="logo-line even left-align"><span><a href="#projects-residential">RESIDENTIAL</a></span><a
+                  href="#projekty-bytove-domy">BYTOVÉ DOMY</a></div>
+              <div class="logo-line odd left-align"></div>
+              <div class="logo-line even"><a href="#projekty-polyfunkcia">POLYFUNKCIA</a><span><a
+                    href="#projects-commercial">COMMERCIAL</a></span></div>
+              <div class="logo-line odd"></div>
+              <div class="logo-line even left-align"><span><a href="#projects-interiors">INTERIORS</a></span><a
+                  href="#projekty-interiery">INTERIÉRY</a></div>
+              <div class="logo-line odd left-align"></div>
+              <div class="logo-line even"><a href="#projekty-publikacie">PUBLIKÁCIE</a><span><a
+                    href="#projects-publications">PUBLICATIONS</a></span></div>
+              <div class="logo-line odd"></div>
+              <div class="logo-text">
+                <img src="/assets/img/svg/logo-sign.svg" alt="Art Of Space" />
+              </div> -->
+            </div>
+          
+          </div>
+	<div class="section">
+		<owl-carousel-o [options]="customOptions">
+         <ng-template carouselSlide>
+           <div class="slide">
+             <img src="https://via.placeholder.com/600/92c952" alt="img 1">
+           </div>
+         </ng-template>
+         <ng-template carouselSlide>
+           <div class="slide">
+             <img src="https://via.placeholder.com/600/771796" alt="img 2">
+           </div>
+         </ng-template>
+         <ng-template carouselSlide>
+           <div class="slide">
+             <img src="https://via.placeholder.com/600/24f355" alt="img 3">
+           </div>
+         </ng-template>
+         <ng-template carouselSlide>
+           <div class="slide">
+             <img src="https://via.placeholder.com/600/d32776" alt="img 4">
+           </div>
+         </ng-template>
+         <ng-template carouselSlide>
+           <div class="slide">
+             <img src="https://via.placeholder.com/600/f66b97" alt="img 5">
+           </div>
+         </ng-template>
+         <ng-template carouselSlide>
+           <div class="slide">
+             <img src="https://via.placeholder.com/600/56a8c2" alt="img 6">
+           </div>
+         </ng-template>
+       </owl-carousel-o>
+	</div>
+   <div class="section">
+
+      <div class="slide">
+         <div class="container-fluid">
+   
+            <div class="row row-main">
+               <div class="col-md-8" id="situation-img">
+   
+               </div>
+               <div class="col-md-4">
+                  <p id="situation-content"></p>
+               </div>
+            </div>
+   
+   
+            <div class="row row-details">
+               <div class="col-md-5">
+                  <ul class="list-unstyled" id="situation-details"></ul>
+               </div>
+               <div class="col-md-3">
+                  <h2 id="situation-category"></h2>
+               </div>
+               <div class="col-md-4">
+                  <h1 id="situation-name"><span></span></h1>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="slide">
+         <h1>Slide 3.1</h1>
+      </div>
+      <div class="slide">
+         <h1>Slide 3.2</h1>
+      </div>
+      <div class="slide">
+         <h1>Slide 3.3</h1>
+         <a routerLink="secondTest">name</a>
+      </div>
+   </div>
+		
+	<div class="section">
+		<h1>Section 4</h1>
+		<button (click)="addSection()">Add sections and change color</button>
+		<button (click)="fullpage_api.moveTo('secondPage', 2)">Move to second page</button>
+		<button (click)="removeLast()">Remove last</button>
+	</div>
+</div>
